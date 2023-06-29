@@ -47,6 +47,28 @@ body {
   font-size: 2rem;
 }
 /* end left page */
+
+/* righ page */
+.right {
+  /* display: grid; */
+  grid-column: 2 /-1;
+  grid-row: 1 /2;
+  position: relative;
+}
+.user-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+.right-middle-main {
+  position: absolute;
+  /* to middle the content */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* end of right page */
 /* footer  */
 /* end of footer */
 
