@@ -60,16 +60,129 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
+  position: relative;
 }
+.user-details label {
+  position: absolute;
+  top: 4rem;
+  left: 50%;
+  color: #a7a6a7;
+  font-size: 1.2rem;
+}
+
+.user-details input {
+  width: 15rem;
+  height: 3rem;
+  color: rgb(29 155 240);
+  padding: 0 2rem;
+  margin-right: 1rem;
+  border: 0.2rem solid #ddd;
+  transition: all 0.5s 0s ease;
+  border-radius: 0.5rem;
+}
+.user-details input::placeholder {
+  color: rgb(29 155 240);
+}
+.user-details input:focus {
+  /* background-color: #d9ebf7; */
+  outline: none;
+  border: 0.2rem solid rgb(29 155 240);
+}
+.user-details input:hover {
+  /* background-color: #d9ebf7; */
+  outline: none;
+  border: 0.2rem solid rgb(29 155 240);
+}
+.btn-top {
+  height: 3rem;
+  width: 6rem;
+  font-size: 13px;
+  background-color: white;
+  color: rgb(29 155 240);
+  border: 0.2rem solid rgb(29 155 240);
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.btn-top:hover {
+  background-color: #d9ebf7;
+}
+
 .right-middle-main {
   position: absolute;
   /* to middle the content */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  /* to display column */
+  flex-direction: column;
+}
+.right-middle-main i {
+  font-size: 4rem;
+  color: rgb(29 155 240);
+  padding-bottom: 1rem;
+}
+.right-middle-main h1 {
+  font-size: 2rem;
+  padding-bottom: 1.5rem;
+}
+.right-middle-main h4 {
+  font-size: 1.4rem;
+  padding-bottom: 1.5rem;
+}
+#btn-signup {
+  font-size: 1.5rem;
+  width: 30rem;
+  margin-bottom: 0.1rem;
+  padding-bottom: 0.3rem;
+  padding-top: 0.3rem;
+  background-color: rgb(29 155 240);
+  color: white;
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+#btn-signup:hover {
+  background-color: rgb(89, 89, 153);
+}
+#btn-login {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  background-color: white;
+  border: 0.1rem solid rgb(29 155 240);
+  border-radius: 5rem;
+  cursor: pointer;
+  transform: backgroud-color 0.3s;
+}
+#btn-login:hover {
+  background-color: #ddd;
 }
 /* end of right page */
 /* footer  */
+.main-page-footer {
+  grid-row: 2/-1;
+  grid-column: 01/-1;
+  background-color: #f5f4f4;
+  border-top: 0.1rem solid #ddd;
+  padding: 1rem;
+}
+.main-page-footer ul {
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.main-page-footer a {
+  text-decoration: none;
+  margin: 2rem;
+  font-size: 1.3rem;
+  color: #444;
+  font-weight: 300;
+}
 /* end of footer */
 
 /* end of main page */
