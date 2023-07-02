@@ -254,6 +254,82 @@ body {
   grid-column: 2/3;
   background-color: #ffff;
 }
-/* login page */
+
+.login-page-form input:not(.login-page-checkbox) {
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  height: 2.7rem;
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+  font-size: 1.3rem;
+  color: black;
+  font-weight: bold;
+  border-radius: 0.2rem;
+  border: 0.1rem solid #a7a6a7;
+  outline: none;
+}
+
+.login-page-form div:not(button) {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  color: black;
+  font-weight: bold;
+}
+
+.login-page-form button {
+  width: 6rem;
+  height: 2.5rem;
+  background-color: rgb(29 155 240);
+  color: white;
+  border-radius: 5rem;
+  outline: none;
+  border: 0.1rem solid rgb(29 155 240);
+  cursor: pointer;
+}
+
+.login-page-checkbox {
+  height: 1.8;
+  border: 9rem solid black;
+  border-radius: 0;
+  margin-left: 1rem;
+  margin-right: 0.2rem;
+}
+
+.login-page-form a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: rgb(29 155 240);
+}
+
+/* end of login page form */
+
+/* login page footer */
+.login-page-footer {
+  grid-row: 3/4;
+  grid-column: 1/-1;
+  background-color: rgba(114, 113, 113, 0.1);
+  padding-left: 10rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-page-footer p {
+  padding-bottom: 0.5rem;
+}
+
+.login-page-footer a {
+  text-decoration: none;
+  color: rgb(29 155 240);
+}
+/* end of login page footer */
+
+/* end of login page */
 
 /* end of login page */
