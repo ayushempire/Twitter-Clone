@@ -460,7 +460,7 @@ body {
   width: 30rem;
   height: 2.6rem;
   border-radius: 3rem;
-  border: 0.1rem solid #808080;
+  border: 0.1rem solid #ece9ec;
   background-color: #ece9ec;
   padding-left: 4rem;
   font-size: 1.2rem;
@@ -471,18 +471,20 @@ body {
   background-color: #fff;
   outline: none;
   scale: 103%;
-  border: 0.2rem solid rgb(29 155 240);
+  border: 0.1rem solid rgb(29 155 240);
 }
 
 .nav-searchbar input:focus {
   background-color: #fff;
   outline: none;
+  border: 0.1rem solid rgb(29 155 240);
 }
 
 .nav-search i {
   position: absolute;
   font-size: 1.3rem;
   left: 1.5rem;
+  color: #808080;
 }
 
 .nav-user {
@@ -509,6 +511,25 @@ body {
   text-decoration: none;
   font-size: 1.5rem;
   color: black;
+  position: relative;
 }
+
+.nav-user a::after {
+  content: "";
+  width: 100%;
+  height: 0.4rem;
+  position: absolute;
+  background-color: rgb(29 155 240);
+  left: 0;
+  bottom: -2.1rem;
+  opacity: 0;
+  transition: all 0.3s;
+  border-radius: 5rem;
+}
+
+.nav-user a:hover::after {
+  opacity: 1;
+}
+
 /* * end of feed page nav */
 /* * end of feed page */
