@@ -478,6 +478,7 @@ body {
   background-color: #fff;
   outline: none;
   border: 0.1rem solid rgb(29 155 240);
+  scale: 103%;
 }
 
 .nav-search i {
