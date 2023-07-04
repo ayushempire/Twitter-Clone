@@ -88,11 +88,13 @@ body {
   /* background-color: #d9ebf7; */
   outline: none;
   border: 0.2rem solid rgb(29 155 240);
+  scale: 105%;
 }
 .user-details input:hover {
   /* background-color: #d9ebf7; */
   outline: none;
   border: 0.2rem solid rgb(29 155 240);
+  scale: 105%;
 }
 .btn-top {
   height: 3rem;
@@ -107,6 +109,7 @@ body {
 }
 .btn-top:hover {
   background-color: #d9ebf7;
+  scale: 105%;
 }
 
 .right-middle-main {
@@ -147,6 +150,7 @@ body {
 }
 #btn-signup:hover {
   background-color: rgb(89, 89, 153);
+  scale: 105%;
 }
 #btn-login {
   font-size: 1.4rem;
@@ -161,6 +165,7 @@ body {
 }
 #btn-login:hover {
   background-color: #ddd;
+  scale: 105%;
 }
 /* end of right page */
 /* footer  */
@@ -184,15 +189,17 @@ body {
   color: #444;
   font-weight: 300;
 }
-/* end of footer */
+/* *end of footer */
 
-/* end of main page */
+/* *end of main page */
 
-/* log in page */
+/* *log in page */
 .login-page {
   width: 100%;
   height: 100vh;
-  display: grid;
+  display: none;
+  /* todo: to not display the log in page*/
+  /* display: grid; */
   grid-template-columns: minmax(5rem, 1fr) 2fr minmax(5rem, 1fr);
   grid-template-rows: repeat(2, min-content) 1fr;
   grid-gap: 1.5rem;
@@ -283,21 +290,26 @@ body {
 .login-page-form input:not(.login-page-checkbox) {
   display: flex;
   flex-direction: column;
-  width: 25rem;
+  width: 23rem;
   height: 2.7rem;
   margin-bottom: 1rem;
-  padding-left: 0.5rem;
+  padding: 0 2rem;
   font-size: 1.3rem;
-  color: black;
+  color: rgb(29 155 240);
   font-weight: bold;
-  border-radius: 0.2rem;
-  border: 0.1rem solid #a7a6a7;
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgb(29 155 240);
   outline: none;
   transition: all 0.3s 0;
 }
 
+.login-page-form input::placeholder {
+  color: rgb(29 155 240);
+}
+
 .login-page-form input:hover {
   border: 0.2rem solid rgb(29 155 240);
+  scale: 102%;
 }
 
 .login-page-form input:focus {
@@ -326,12 +338,20 @@ body {
   cursor: pointer;
 }
 
+.login-page-form button:hover {
+  scale: 103%;
+}
 .login-page-checkbox {
   height: 1.8;
   border: 9rem solid black;
   border-radius: 0;
   margin-left: 1rem;
   margin-right: 0.2rem;
+}
+
+.login-page-checkbox {
+  border-radius: 0;
+  scale: 103%;
 }
 
 .login-page-form a {
@@ -349,7 +369,7 @@ body {
   background-color: rgba(114, 113, 113, 0.1);
   padding-left: 10rem;
   font-size: 1.3rem;
-  font-weight: 500;
+  font-weight: 300;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -363,8 +383,132 @@ body {
   text-decoration: none;
   color: rgb(7, 106, 172);
 }
+
 /* end of login page footer */
-
 /* end of login page */
 
-/* end of login page */
+/* * feed page */
+
+.feed-page {
+  width: 100%;
+  height: 100vh;
+}
+
+/* * feed page nav */
+
+.feed-nav-page {
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #fff;
+  /* todo: keep nav bar fixed */
+  position: fixed;
+  /* todo box shadow */
+  box-shadow: 0 0 0.7rem 0 rgba(0, 0, 0, 0.3);
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.9rem;
+  margin-right: 2rem;
+}
+
+.icons a {
+  margin: 2.5rem;
+  color: #808080;
+  position: relative;
+}
+
+.icons a:hover {
+  scale: 108%;
+}
+
+.icons .active {
+  color: rgb(29 155 240);
+}
+
+.icons a::after {
+  content: "";
+  width: 100%;
+  height: 0.4rem;
+  position: absolute;
+  background-color: rgb(29 155 240);
+  left: 0;
+  bottom: -2rem;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.icons a:hover::after {
+  opacity: 1;
+  scale: 120%;
+}
+/* ! styling searchbar in nav */
+.nav-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-right: 2rem;
+}
+
+.nav-searchbar input {
+  width: 30rem;
+  height: 2.6rem;
+  border-radius: 3rem;
+  border: 0.1rem solid #808080;
+  background-color: #ece9ec;
+  padding-left: 4rem;
+  font-size: 1.2rem;
+  transition: all 0.3ec;
+}
+
+.nav-searchbar input:hover {
+  background-color: #fff;
+  outline: none;
+  scale: 103%;
+  border: 0.2rem solid rgb(29 155 240);
+}
+
+.nav-searchbar input:focus {
+  background-color: #fff;
+  outline: none;
+}
+
+.nav-search i {
+  position: absolute;
+  font-size: 1.3rem;
+  left: 1.5rem;
+}
+
+.nav-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-user-profile {
+  width: 4rem;
+  height: 4rem;
+  border: 0.1rem solid rgb(29 155 240);
+  border-radius: 50%;
+}
+
+.nav-user-profile img {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+}
+
+.nav-user a {
+  margin-left: 1rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: black;
+}
+/* * end of feed page nav */
+/* * end of feed page */
