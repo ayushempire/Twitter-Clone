@@ -438,15 +438,15 @@ body {
   position: absolute;
   background-color: rgb(29 155 240);
   left: 0;
-  bottom: -2rem;
+  bottom: -1.7rem;
   opacity: 0;
   transition: all 0.3s;
 }
 
 .icons a:hover::after {
   opacity: 1;
-  scale: 120%;
 }
+
 /* ! styling searchbar in nav */
 .nav-search {
   display: flex;
@@ -533,4 +533,92 @@ body {
 }
 
 /* * end of feed page nav */
-/* * end of feed page */
+
+/* * feed header */
+.feed-page-content {
+  display: grid;
+  grid-template-columns: minmax(20rem, 1fr) 60rem 40rem minmax(20rem, 1fr);
+  grid-template-rows: repeat(2, min-content);
+  padding-top: 6.5rem;
+}
+.feed-header {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.feed-header-top {
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+  margin-top: 0.7rem;
+  background-color: white;
+  border-bottom: 0.1rem solid #aaa;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1.3rem;
+}
+
+.feed-header-top h2 {
+  font-size: 2rem;
+}
+
+.feed-header-top i {
+  font-size: 2rem;
+  color: rgb(29 155 240);
+}
+
+.feed-content-header-post {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 1rem;
+  padding-left: 0.8rem;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+  background-color: #fff;
+}
+
+.feed-content-img-wrapper {
+  width: 4rem;
+  height: 4rem;
+}
+
+.feed-content-img-wrapper img {
+  height: 4rem;
+  width: 4rem;
+  border: 0.1rem solid rgb(29 155 240);
+  border-radius: 50%;
+}
+
+.feed-content-header-post input {
+  width: 36rem;
+  height: 3rem;
+  background-color: #ece9ec;
+  border: 0.1rem solid #ece9ec;
+  border-radius: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.feed-content-header-post input:hover {
+  border: 0.1rem solid rgb(29 155 240);
+  background-color: #fff;
+}
+.feed-content-header-post input:focus {
+  border: 0.1rem solid rgb(29 155 240);
+  background-color: #fff;
+  outline: none;
+}
+
+.feed-content-header-post input::placeholder {
+  font-weight: 500;
+}
+
+.feed-content-header-post i {
+  font-size: 2.2rem;
+  color: rgb(29 155 240);
+}
+/*g * end of feed header */
+/* b* end of feed page */
