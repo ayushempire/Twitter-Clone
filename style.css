@@ -553,9 +553,9 @@ body {
   margin-top: 0.7rem;
   background-color: white;
   border-bottom: 0.1rem solid #aaa;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 1.2rem;
+  padding-left: 1.6rem;
+  padding-right: 1.8rem;
+  padding-top: 1.3rem;
   padding-bottom: 1.3rem;
 }
 
@@ -578,6 +578,7 @@ body {
   padding-bottom: 1rem;
   padding-right: 1rem;
   background-color: #fff;
+  border-bottom: 0.1rem solid #aaa;
 }
 
 .feed-content-img-wrapper {
@@ -605,10 +606,12 @@ body {
 .feed-content-header-post input:hover {
   border: 0.1rem solid rgb(29 155 240);
   background-color: #fff;
+  scale: 102%;
 }
 .feed-content-header-post input:focus {
   border: 0.1rem solid rgb(29 155 240);
   background-color: #fff;
+  scale: 102%;
   outline: none;
 }
 
@@ -620,5 +623,100 @@ body {
   font-size: 2.2rem;
   color: rgb(29 155 240);
 }
-/*g * end of feed header */
-/* b* end of feed page */
+
+.feed-content-header-post i:hover {
+  scale: 103%;
+  cursor: pointer;
+}
+
+/* *end of feed header */
+
+/* * post */
+.posts {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  height: 100%;
+  background-color: #fff;
+}
+.post {
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  margin-left: 0rem;
+  border-bottom: 0.1rem solid #aaa;
+}
+.post-profile {
+  width: 6rem;
+  height: 6rem;
+  padding-right: 1.5rem;
+  padding-left: 1rem;
+}
+
+.post-profile img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: 0.1rem solid rgb(29 155 240);
+}
+.post-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-user-info {
+  display: flex;
+  font-size: 1.3rem;
+}
+
+.post-info h4 {
+  padding-right: 0.3rem;
+}
+
+.post-info i {
+  padding-right: 0.3rem;
+}
+
+.post-info h5 {
+  padding-left: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.post-info p {
+  font-size: 1.5rem;
+  padding-top: 1.5rem;
+  padding-right: 1rem;
+}
+
+.posted-img {
+  width: 50rem;
+  height: 40rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.posted-img img {
+  width: 50rem;
+  height: 40rem;
+  border-radius: 1rem;
+}
+
+.post-icons {
+  display: flex;
+  justify-items: center;
+  justify-content: space-evenly;
+  font-size: 1.6rem;
+  padding-bottom: 1rem;
+  color: rgb(29 155 240);
+}
+
+.post-icons i {
+  transition: all 0.3s;
+}
+.post-icons i:hover {
+  scale: 110%;
+  cursor: pointer;
+}
+/* * end of post */
+/* *end of feed page */
