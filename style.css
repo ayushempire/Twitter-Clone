@@ -19,8 +19,8 @@ body {
 .main-page {
   width: 100%;
   height: 100vh;
-  /* display: grid; */
-  display: none;
+  display: grid;
+  /* display: none; */
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr min-content;
 }
@@ -392,6 +392,7 @@ body {
 .feed-page {
   width: 100%;
   height: 100vh;
+  display: none;
 }
 
 /* * feed page nav */
@@ -502,8 +503,9 @@ body {
 }
 
 .nav-user-profile img {
-  height: 4rem;
-  width: 4rem;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
   border-radius: 50%;
 }
 
@@ -537,9 +539,11 @@ body {
 /* * feed header */
 .feed-page-content {
   display: grid;
+  /* flex-wrap: initial; */
   grid-template-columns: minmax(20rem, 1fr) 60rem 40rem minmax(20rem, 1fr);
   grid-template-rows: repeat(2, min-content);
   padding-top: 6.5rem;
+  grid-column-gap: 2.5rem;
 }
 .feed-header {
   grid-column: 2/3;
@@ -587,8 +591,9 @@ body {
 }
 
 .feed-content-img-wrapper img {
-  height: 4rem;
-  width: 4rem;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
   border: 0.1rem solid rgb(29 155 240);
   border-radius: 50%;
 }
@@ -634,9 +639,12 @@ body {
 /* * post */
 .posts {
   grid-column: 2/3;
-  grid-row: 3/4;
-  height: 100%;
+  grid-row: 2/-1;
+  /* height: 100%; */
   background-color: #fff;
+  padding-top: 11rem;
+  margin-top: 1rem;
+  z-index: -1;
 }
 .post {
   display: flex;
@@ -656,6 +664,7 @@ body {
 .post-profile img {
   width: 6rem;
   height: 6rem;
+  object-fit: cover;
   border-radius: 50%;
   border: 0.1rem solid rgb(29 155 240);
 }
@@ -697,21 +706,26 @@ body {
 }
 
 .posted-img img {
-  width: 50rem;
-  height: 40rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 1rem;
 }
 
 .post-icons {
   display: flex;
-  justify-items: center;
+  align-items: center;
   justify-content: space-evenly;
   font-size: 1.6rem;
   padding-bottom: 1rem;
   color: rgb(29 155 240);
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
 .post-icons i {
+  cursor: pointer;
+  padding-bottom: 1rem;
   transition: all 0.3s;
 }
 .post-icons i:hover {
@@ -719,4 +733,151 @@ body {
   cursor: pointer;
 }
 /* * end of post */
+/* * side bar of feed page */
+.side-bar {
+  position: fixed;
+  left: 62.5%;
+  /* grid-row: 2/3;
+  grid-column: 3/4; */
+  margin-top: 0.8rem;
+  width: 30rem;
+}
+
+.side-bar-head {
+  background-color: #fff;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+
+  border-bottom: 0.1rem solid #aaa;
+}
+
+.side-bar-head h3 {
+  font-size: 1.8rem;
+}
+
+.who-to-follow {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: left;
+  justify-items: flex-start;
+  align-content: flex-start; */
+  align-items: center;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  background-color: #fff;
+  border-bottom: 0.1rem solid rgb(29 155 240);
+}
+.side-bar-img {
+  width: 6rem;
+  height: 6rem;
+  margin-right: 1.7rem;
+  margin-left: 1rem;
+}
+
+.side-bar-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.to-follow-info h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+}
+
+.to-follow-info h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.to-follow-info i {
+  color: rgb(29 155 240);
+}
+
+.sidebar-follow-btn {
+  margin-left: auto;
+  margin-right: 1rem;
+}
+.sidebar-follow-btn button {
+  height: 3rem;
+  width: 8rem;
+  background-color: #fff;
+  border: 0.2rem solid rgb(29 155 240);
+  border-radius: 3rem;
+  font-size: 1.3rem;
+  color: rgb(29 155 240);
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.sidebar-follow-btn button:hover {
+  scale: 103%;
+  background-color: rgb(89, 89, 153);
+  cursor: pointer;
+}
+
+.sidebar-show-more {
+  font-size: 1.3rem;
+  background-color: #fff;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+  padding-left: 1rem;
+}
+
+.sidebar-show-more a {
+  text-decoration: none;
+  color: rgb(29 155 240);
+}
+
+.sidebar-footer {
+  padding-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.sidebar-footer ul {
+  display: flex;
+  justify-items: center;
+  justify-content: space-around;
+}
+
+.sidebar-footer li {
+  list-style: none;
+}
+
+.sidebar-footer a {
+  text-decoration: none;
+  font-weight: 200;
+  color: #808080;
+}
+
+/* * end of side bar of feed page */
+/* *post button  */
+.post-btn {
+  position: fixed;
+  bottom: 2rem;
+  left: 78%;
+  width: 10rem;
+  height: 3rem;
+  color: #fff;
+  background-color: rgb(29 155 240);
+  border: 0.1rem solid rgb(7, 106, 172);
+  outline: none;
+  border-radius: 3rem;
+  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.post-btn i {
+  color: #fff;
+}
+
+.post-btn:hover {
+  background-color: rgb(89, 89, 153);
+}
+
+/* * end of post button  */
 /* *end of feed page */

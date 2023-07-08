@@ -9,7 +9,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -69,8 +68,12 @@
 
           <h4>Join Twitter today</h4>
 
-          <button type="button" id="btn-signup">Sign up</button>
-          <button type="button" id="btn-login">Log in</button>
+          <button type="button" class="sign-up main-btn" id="btn-signup">
+            Sign up
+          </button>
+          <button type="button" class="log-in main-btn" id="btn-login">
+            Log in
+          </button>
 
           <!-- end of right middle main -->
         </div>
@@ -328,8 +331,107 @@
           <!-- *post 5 end -->
         </div>
         <!-- * end of feed post -->
+        <!-- * side bar  -->
+        <div class="side-bar">
+          <div class="side-bar-head">
+            <h3>Who to follow</h3>
+          </div>
+
+          <!-- * to follow 1 -->
+          <div class="who-to-follow">
+            <div class="side-bar-img">
+              <img src="images/Cristiano_Ronaldo.jpg" width="20px" />
+            </div>
+            <div class="to-follow-info">
+              <h4>
+                Christiano Ronaldo <i class="fa-solid fa-circle-check"></i>
+              </h4>
+              <h5>@Christiano</h5>
+            </div>
+            <div class="sidebar-follow-btn">
+              <button type="button">follow</button>
+            </div>
+          </div>
+
+          <!-- * to follow 2 -->
+          <div class="who-to-follow">
+            <div class="side-bar-img">
+              <img src="images/modi_ji.jpg" width="20px" />
+            </div>
+            <div class="to-follow-info">
+              <h4>Narendra Modi <i class="fa-solid fa-circle-check"></i></h4>
+              <h5>@PMofindia</h5>
+            </div>
+            <div class="sidebar-follow-btn">
+              <button type="button">follow</button>
+            </div>
+          </div>
+
+          <!-- * to follw 3 -->
+          <div class="who-to-follow">
+            <div class="side-bar-img">
+              <img src="images/Virat_Kohli.webp" width="20px" />
+            </div>
+            <div class="to-follow-info">
+              <h4>Virat Kohli <i class="fa-solid fa-circle-check"></i></h4>
+              <h5>@viratkohli18</h5>
+            </div>
+            <div class="sidebar-follow-btn">
+              <button type="button">follow</button>
+            </div>
+          </div>
+
+          <!-- * to follw 4 -->
+          <div class="who-to-follow">
+            <div class="side-bar-img">
+              <img src="images/isro_.png" width="20px" />
+            </div>
+            <div class="to-follow-info">
+              <h4>ISRO <i class="fa-solid fa-circle-check"></i></h4>
+              <h5>@isro</h5>
+            </div>
+            <div class="sidebar-follow-btn">
+              <button type="button">follow</button>
+            </div>
+          </div>
+
+          <!-- * to follw 5 -->
+          <div class="who-to-follow">
+            <div class="side-bar-img">
+              <img src="images/sunil_chetri.jpg" width="20px" />
+            </div>
+            <div class="to-follow-info">
+              <h4>Sunil Chetri <i class="fa-solid fa-circle-check"></i></h4>
+              <h5>@sunilchetri18</h5>
+            </div>
+            <div class="sidebar-follow-btn">
+              <button type="button">follow</button>
+            </div>
+          </div>
+
+          <div class="sidebar-show-more">
+            <a href="#">Show more</a>
+          </div>
+
+          <div class="sidebar-footer">
+            <ul>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Cookies</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">More</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- * end of side bar  -->
       </div>
+      <button type="button" class="post-btn">
+        +<i class="fas fa-feather-alt"></i> Post
+      </button>
     </section>
     <!-- *end of feed page -->
+
+    <!-- * adding script file -->
+    <script src="script.js"></script>
   </body>
 </html>
