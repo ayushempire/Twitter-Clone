@@ -109,10 +109,12 @@
       <nav class="login-page-nav">
         <ul>
           <li class="brand">
-            <a href="#"><i class="fas fa-dove"></i>Home</a>
+            <a class="brand-home-btn" href="#"
+              ><i class="fas fa-dove"></i>Home</a
+            >
           </li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Language: English</a></li>
+          <li><a class="brand-about-btn" href="#">About</a></li>
+          <li><a class="brnad-lag-btn" href="#">Language: English</a></li>
         </ul>
       </nav>
       <!-- end of login page nav -->
@@ -120,8 +122,16 @@
       <div class="login-page-content">
         <h1>Log in to Twitter</h1>
         <form class="login-page-form">
-          <input type="text" placeholder="Phone,email or password" />
-          <input type="password" placeholder="Password" />
+          <input
+            type="text"
+            class="loginpage-userinfo"
+            placeholder="Phone,email or password"
+          />
+          <input
+            type="password"
+            class="loginpage-password"
+            placeholder="Password"
+          />
           <div>
             <button type="button" class="login-page-loginbtn">Log in</button>
             <input class="login-page-checkbox" type="checkbox" id="check" />
@@ -139,8 +149,18 @@
             <a href="#"> Activte your account</a>
           </p>
         </footer>
+        <!-- enf of footer of login page -->
       </div>
-      <!-- enf of footer of login page -->
+
+      <!-- log in model -->
+      <div class="login-model">
+        <i class="fas fa-times"></i>
+        <p>
+          The username and password you entered did not match our records.
+          Please recheck and try again.
+        </p>
+      </div>
+      <!-- end oflog in model -->
     </section>
     <!-- end of login page -->
 

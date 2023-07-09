@@ -19,8 +19,8 @@ body {
 .main-page {
   width: 100%;
   height: 100vh;
-  display: grid;
-  /* display: none; */
+  /* display: grid; */
+  display: none;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr min-content;
 }
@@ -197,9 +197,9 @@ body {
 .login-page {
   width: 100%;
   height: 100vh;
-  display: none;
+  /* display: none; */
   /* todo: to not display the log in page*/
-  /* display: grid; */
+  display: grid;
   grid-template-columns: minmax(5rem, 1fr) 2fr minmax(5rem, 1fr);
   grid-template-rows: repeat(2, min-content) 1fr;
   grid-gap: 1.5rem;
@@ -385,6 +385,34 @@ body {
 }
 
 /* end of login page footer */
+
+/* log in page model */
+.login-model {
+  position: fixed;
+  width: 45rem;
+  top: 7.3rem;
+  left: 32%;
+  background-color: #fff;
+  padding: 2rem;
+  box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.3);
+  border-radius: 0 0 1rem 1rem;
+  text-align: center;
+  display: none;
+}
+
+.login-model i {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 1.4%;
+  top: 5%;
+  cursor: pointer;
+}
+
+.login-model p {
+  font-size: 1.3rem;
+}
+
+/* end of log in page model */
 /* end of login page */
 
 /* * feed page */
