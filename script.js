@@ -19,6 +19,22 @@ const loginpage_model = document.querySelector(".login-model");
 
 const login_model_icon = document.querySelector(".login-model i");
 
+const postBtn = document.querySelector(".post-btn");
+
+const psotBlockWrapper = document.querySelector(".post-block-wrapper");
+
+const psotBlock = document.querySelector(".post-block");
+
+const psotBlock_icon = document.querySelector(".post-block-header i");
+
+const psotBlock_postBtn = document.querySelector(".postblock-button");
+console.log(psotBlock_postBtn);
+
+const postblock_addBtn = document.querySelector(".post-block-footer span");
+console.log(postblock_addBtn);
+
+const postblock_input = document.querySelector(".postblock-input");
+console.log(postblock_input);
 // ******************************************************************** //
 
 // main page
@@ -96,4 +112,41 @@ loginpage_login_btn.addEventListener("click", () => {
 // todo login model cross button
 login_model_icon.addEventListener("click", () => {
   loginpage_model.style.display = "none";
+});
+
+// * Feed Page
+
+// * Post button
+
+// todo creating function for opacity change of post block buttons
+const changeOpacity = (x) => {
+  psotBlock_postBtn.style.opacity = x;
+  postblock_addBtn.style.opacity = x;
+};
+
+// todo making post button active
+postBtn.addEventListener("click", () => {
+  psotBlock.style.display = "block";
+  psotBlockWrapper.classList.add("post-block-wrapper-display");
+});
+
+// todo making close post model box
+psotBlock_icon.addEventListener("click", () => {
+  psotBlock.style.display = "none";
+  psotBlockWrapper.classList.remove("post-block-wrapper-display");
+  postblock_input.value = "";
+  changeOpacity(0.5);
+});
+
+// todo opacity changes as we type in post block
+postblock_input.addEventListener("keypress", (e) => {
+  if (e.target.value !== "") {
+    changeOpacity(1);
+  }
+});
+
+postblock_input.addEventListener("blur", (e) => {
+  if (e.target.value === "") {
+    changeOpacity(0.5);
+  }
 });
