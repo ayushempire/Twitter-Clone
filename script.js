@@ -28,13 +28,18 @@ const psotBlock = document.querySelector(".post-block");
 const psotBlock_icon = document.querySelector(".post-block-header i");
 
 const psotBlock_postBtn = document.querySelector(".postblock-button");
-console.log(psotBlock_postBtn);
 
 const postblock_addBtn = document.querySelector(".post-block-footer span");
-console.log(postblock_addBtn);
 
 const postblock_input = document.querySelector(".postblock-input");
-console.log(postblock_input);
+
+const user_info = document.querySelector(".nav-user a");
+
+const account_close = document.querySelector(".account-header i");
+
+const account_content = document.querySelector(".account-content");
+
+const account_wrapper = document.querySelector(".account-wrapper");
 // ******************************************************************** //
 
 // main page
@@ -149,4 +154,18 @@ postblock_input.addEventListener("blur", (e) => {
   if (e.target.value === "") {
     changeOpacity(0.5);
   }
+});
+
+// * account info
+
+// todo making account ino active
+user_info.addEventListener("click", () => {
+  account_content.classList.add("account-content-upgrade");
+  account_wrapper.classList.add("account-upgrade");
+});
+
+// todo making account close icon work
+account_close.addEventListener("click", () => {
+  account_content.classList.remove("account-content-upgrade");
+  account_wrapper.classList.remove("account-upgrade");
 });
