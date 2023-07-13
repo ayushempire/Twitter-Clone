@@ -40,6 +40,8 @@ const account_close = document.querySelector(".account-header i");
 const account_content = document.querySelector(".account-content");
 
 const account_wrapper = document.querySelector(".account-wrapper");
+
+const dark_mode = document.querySelector(".circle");
 // ******************************************************************** //
 
 // main page
@@ -168,4 +170,32 @@ user_info.addEventListener("click", () => {
 account_close.addEventListener("click", () => {
   account_content.classList.remove("account-content-upgrade");
   account_wrapper.classList.remove("account-upgrade");
+});
+
+// * dark mode
+const darkElement1 = document.querySelectorAll(".darkmode-1");
+
+const darkElement2 = document.querySelectorAll(".darkmode-2");
+// console.log(darkElement2);
+
+const lightElement = document.querySelectorAll(".lightmode");
+
+const bordered = document.querySelectorAll(".border-1");
+// todo toggle dark mode button
+dark_mode.addEventListener("click", () => {
+  dark_mode.classList.toggle("circle-upgrade");
+
+  // todo to convert output to arrray list
+  Array.from(darkElement1).map((darkEl1) =>
+    darkEl1.classList.toggle("dark-mode-1")
+  );
+  Array.from(darkElement2).map((darkEl2) =>
+    darkEl2.classList.toggle("dark-mode-2")
+  );
+
+  Array.from(lightElement).map((lightEl) => lightEl.classList.toggle("light"));
+
+  Array.from(bordered).map((borderEl) =>
+    borderEl.classList.toggle("border-color")
+  );
 });
