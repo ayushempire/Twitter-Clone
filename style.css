@@ -137,7 +137,7 @@ body {
 }
 #btn-signup {
   font-size: 1.5rem;
-  width: 30rem;
+  /* width: 30rem; */
   margin-bottom: 0.1rem;
   padding-bottom: 0.3rem;
   padding-top: 0.3rem;
@@ -155,6 +155,7 @@ body {
 #btn-login {
   font-size: 1.4rem;
   margin-top: 1rem;
+  /* width: 30rem; */
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
   background-color: white;
@@ -197,9 +198,9 @@ body {
 .login-page {
   width: 100%;
   height: 100vh;
-  display: none;
+  /* display: none; */
   /* todo: to not display the log in page*/
-  /* display: grid; */
+  display: grid;
   grid-template-columns: minmax(5rem, 1fr) 2fr minmax(5rem, 1fr);
   grid-template-rows: repeat(2, min-content) 1fr;
   grid-gap: 1.5rem;
@@ -214,7 +215,7 @@ body {
   box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.3);
 }
 .login-page-nav ul {
-  width: 80rem;
+  width: 80%;
   margin: auto;
   display: flex;
   align-items: flex-end;
@@ -389,9 +390,9 @@ body {
 /* log in page model */
 .login-model {
   position: fixed;
-  width: 45rem;
+  width: 30%;
   top: 7.3rem;
-  left: 32%;
+  left: 33%;
   background-color: #fff;
   padding: 2rem;
   border-top: 0.2rem solid #1aa1f5;
@@ -421,7 +422,7 @@ body {
 .feed-page {
   width: 100%;
   height: 100vh;
-  /* display: none; */
+  display: none;
 }
 
 /* * feed page nav */
@@ -1254,3 +1255,276 @@ body {
 /* * end of account info  */
 
 /* *end of feed page */
+
+/* * responsive page */
+
+@media (max-width: 1054px) {
+  /*  main page */
+
+  .right-middle-main {
+    width: 60%;
+  }
+  .main-page-footer ul {
+    flex-wrap: wrap;
+  }
+  .main-page-footer li {
+    margin-bottom: 1rem;
+  }
+  /* end of main page */
+  /* log in page */
+  .login-page-content {
+    grid-template-columns: 8rem 1fr;
+  }
+  .login-page-footer {
+    padding-left: 8rem;
+  }
+  /* end of login page */
+}
+
+@media (max-width: 957px) {
+  /* main page */
+  .main-page {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr min-content;
+  }
+
+  .user-details {
+    display: none;
+  }
+  .left {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+  .right {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+  .main-page-footer {
+    grid-row: 3/4;
+  }
+  .right-middle-main {
+    width: 50%;
+  }
+  .right-middle-main h1 {
+    font-size: 2.5rem;
+  }
+  .right-middle-main h4 {
+    font-size: 2rem;
+  }
+  .right-middle-main button {
+    height: 3rem;
+    font-size: 2rem;
+  }
+  /* main page end */
+  /* login page */
+  .login-page-content {
+    grid-template-columns: 6rem 1fr;
+  }
+  .login-page-footer {
+    padding-left: 6rem;
+  }
+  /* end of login page */
+}
+
+@media (max-width: 830px) {
+  .login-page-content {
+    grid-template-columns: 5rem 1fr;
+  }
+  .login-page-footer {
+    padding-left: 5rem;
+  }
+  .login-page-footer p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 730px) {
+  /* login page  */
+  .login-page-content {
+    grid-template-columns: 2rem 1fr;
+  }
+  .login-page-footer {
+    padding-left: 2rem;
+  }
+}
+
+@media (max-width: 670px) {
+  .login-page-form input:not(.login-page-checkbox) {
+    width: 20rem;
+  }
+  .login-page-form a,
+  label,
+  button {
+    font-size: 1.1rem;
+  }
+  .login-page-footer {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .login-page {
+    grid-template-columns: minmax(2rem, 6rem) 2fr minmax(2rem, 6rem);
+  }
+}
+
+@media (max-width: 624px) {
+  .main-page {
+    grid-template-rows: repeat(2 1fr) min-content;
+  }
+  .right-middle-main {
+    width: 50%;
+  }
+  /* login page */
+  .login-page {
+    grid-template-columns: minmax(2rem, 8rem) 2fr minmax(2rem, 8rem);
+  }
+  /* end of log in page */
+}
+
+@media (max-width: 615px) {
+  .right-middle-main {
+    width: 50%;
+  }
+  .right-middle-main h1 {
+    font-size: 2rem;
+  }
+  /* end of main page */
+  /* log in page */
+  .login-page-content {
+    width: 100%;
+  }
+
+  /* end of log in page */
+}
+
+@media (max-width: 564px) {
+  .main-page {
+    grid-template-rows: repeat(2 1fr) min-content;
+  }
+}
+
+@media (max-width: 510px) {
+  .login-page {
+    grid-template-columns: minmax(2rem, 4rem) 2fr minmax(2rem, 4rem);
+  }
+  .login-page-content {
+    grid-template-columns: 3rem 1fr;
+  }
+  .login-page-footer {
+    padding-left: 3rem;
+  }
+}
+
+@media (max-width: 460px) {
+  /* main page */
+  .main-page {
+    grid-template-rows: 2fr 2fr min-content;
+  }
+  /* end of main page */
+  /* login page */
+  .login-page-nav ul {
+    width: 100%;
+  }
+  .login-page-content {
+    /* grid-row: 2/3; */
+    grid-column: 1/-1;
+  }
+  /* end of login page */
+}
+
+@media (max-width: 415px) {
+  /* login page */
+  .login-page-nav {
+    padding: 2rem 1rem;
+  }
+  .login-page-nav li {
+    margin: 0 0.5rem;
+  }
+  /* end of login page */
+}
+
+@media (max-width: 320px) {
+  .main-page {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2 1fr) min-content;
+  }
+
+  .right-middle-main h1 {
+    font-size: 1.8rem;
+  }
+  .right-middle-main h4 {
+    font-size: 1.3rem;
+  }
+  .left-content-heading {
+    font-size: 1.5rem;
+  }
+
+  /* login page */
+  .login-page-content {
+    grid-template-rows: 8rem 16rem 7rem;
+  }
+  .login-page-nav ul {
+    width: 100%;
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+  .login-page-nav li {
+    margin: 1rem;
+  }
+  .login-page-nav li:last-child {
+    margin-right: 0;
+  }
+  /* end of login page */
+}
+
+@media (max-width: 265px) {
+  .right-middle-main i {
+    font-size: 2.3rem;
+  }
+  .main-page-footer a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 254px) {
+  .main-page {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2 1fr) min-content;
+  }
+}
+
+@media (max-width: 234px) {
+  .main-page {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr min-content;
+  }
+  .right-middle-main h1 {
+    font-size: 1.5rem;
+  }
+  .right-middle-main h4 {
+    font-size: 1.1rem;
+  }
+  .left-content-heading {
+    font-size: 1.3rem;
+  }
+  .right-middle-main i {
+    font-size: 1.8rem;
+  }
+  .right-middle-main button {
+    scale: 96%;
+  }
+}
+
+@media (max-width: 206px) {
+  .right-middle-main h1 {
+    font-size: 1.5rem;
+  }
+  .right-middle-main h4 {
+    font-size: 1.1rem;
+  }
+  .left-content-heading {
+    font-size: 1rem;
+  }
+}
+/* * end of responsive page */

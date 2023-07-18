@@ -172,6 +172,11 @@ account_close.addEventListener("click", () => {
   account_wrapper.classList.remove("account-upgrade");
 });
 
+// account_wrapper.addEventListener("click", () => {
+//   account_content.classList.remove("account-content-upgrade");
+//   account_wrapper.classList.remove("account-upgrade");
+// });
+
 // * dark mode
 const darkElement1 = document.querySelectorAll(".darkmode-1");
 
