@@ -204,3 +204,5 @@ dark_mode.addEventListener("click", () => {
     borderEl.classList.toggle("border-color")
   );
 });
+
+// completed
