@@ -33,7 +33,7 @@ const postblock_addBtn = document.querySelector(".post-block-footer span");
 
 const postblock_input = document.querySelector(".postblock-input");
 
-const user_info = document.querySelector(".nav-user a");
+const user_info = document.querySelector(".nav-user");
 
 const account_close = document.querySelector(".account-header i");
 
